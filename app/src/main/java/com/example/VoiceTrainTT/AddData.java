@@ -51,11 +51,11 @@ public class AddData extends AppCompatActivity {
     private void processInsert()
     {
         Map<String,Object> map=new HashMap<>();
-        map.put("trainno",trainno.getText().toString());
-        map.put("source",source.getText().toString());
-        map.put("dest",dest.getText().toString());
-        map.put("time",time.getText().toString());
-        map.put("type",type.getText().toString());
+        map.put("TrainNo",trainno.getText().toString());
+        map.put("Source",source.getText().toString());
+        map.put("Destination",dest.getText().toString());
+        map.put("Time",time.getText().toString());
+        map.put("Type",type.getText().toString());
 
         FirebaseDatabase.getInstance().getReference().child("Locals").child("Central").push()
                 .setValue(map)
